@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  react:
+    container_name: react
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volumes/react-data:/frontend
+    build:
+      context: .
+      dockerfile: ./Dockerfile

@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  graphql:
+    container_name: graphql
+    ports:
+      - "3026:3026"
+    volumes:
+      - /volumes/graphQL-data:/backend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
